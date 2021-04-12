@@ -1,3 +1,13 @@
+A dirty hack of a fork to make this library compile to a web environment.
+
+```
+npm i
+npm run build
+npx browserify .\dist\index.js --plugin tinyify --standalone Icns -o icns.js
+```
+
+Output is icns.js
+
 <!-- markdownlint-disable MD024 -->
 
 # icns

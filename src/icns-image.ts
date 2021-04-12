@@ -131,6 +131,10 @@ export class IcnsImage {
     return new IcnsImage(osType, bytes, image)
   }
 
+  static fromArrayBuffer(buffer: ArrayBuffer, osType: OSType): IcnsImage {
+    return IcnsImage.fromPNG(Buffer.from(buffer), osType);
+  }
+
   get data(): Buffer {
     const buffer = Buffer.alloc(8)
     buffer.write(this.osType, 0, 4, 'ascii')
